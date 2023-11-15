@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Registro</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Formulário de Registro</h1>
+    <p>Por favor preencha este formulário com as informaões necessárias</p>
+    <form action="mailto:analistasistemascorrea@gmail.com" method="get">
+
+      <fieldset>
+        <label for="nome">Nome: <input id="nome" type="text" required /></label>
+        <label for="sobrenome"
+          >Sobrenome: <input id="sobrenome" type="text" required
+        /></label>
+        <label for="email"
+          >Email: <input id="email" type="email" required
+        /></label>
+        <label for="senha"
+          >Nova Senha:
+          <input id="senha" type="password" pattern="[a-z0-9]{8,}" required
+        /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Escolha o tipo da conta</legend>
+        <label for="conta-pessoal"
+          ><input class="inline" id="conta-pessoal" type="radio" name="tipo-conta" checked />
+          Pessoal</label
+        >
+        <label for="conta-corporativa"
+          ><input class="inline" type="radio" name="tipo-conta" id="conta-corporativa" />
+          Corporativo</label
+        >
+      </fieldset>
+
+      <fieldset>
+        <label for="foto">Upload foto: <input type="file" name="" id="foto" /></label>
+        <label for="idade"
+          >Idade (anos) <input type="number" min="13" max="120" id="idade"
+        /></label>
+        <label for="conhecimento"
+          >Como ficou sabendo sobre nós?
+          <select name="" id="conhecimento">
+            <option value="">Selecione um</option>
+            <option value="1">Indicação</option>
+            <option value="2">Instagran</option>
+            <option value="3">Google</option>
+            <option value="4">Outros</option>
+          </select>
+        </label>
+        <label for="duvidas">Em caso de dúvidas: <textarea name="" id="duvidas" cols="30" rows="3" placeholder="Posso tatuar alcoolizado?"></textarea></label>
+      </fieldset>
+      <label for="termos-e-condicoes"
+        ><input class="inline" type="checkbox" name="" id="termos-e-condicoes" required />
+        Aceito os <a href="#">termos e condições.</a></label>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
